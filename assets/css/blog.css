@@ -1,0 +1,201 @@
+/* 
+    Document   : blog
+    Created on : Jun 19, 2013, 9:05:25 AM
+    Author     : jonforest
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+/*Elements*/
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-image:url('../images/bg3.jpg');
+    background-repeat:repeat-x;
+    background-attachment: fixed;
+    background-position-x: left;
+    background-position-y: top;
+    margin:0;
+    font-family:"Verdana";
+    /*background: #111111 url('/images/background.jpg') repeat-x fixed top center;*/
+}
+
+pre {
+
+    overflow: scroll;
+    /* Fallback for web browsers that doesn't support RGBa */
+    color:white;
+    background: rgb(0, 0, 0);
+    padding: 5px;
+
+}
+
+input, textarea {
+    vertical-align: top;
+    float:left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width:100%;
+    border-radius:15px;
+    padding:0px 5px;
+    margin: 0px;
+}
+
+
+    textarea {
+    min-height: 300px;
+}
+
+
+input:focus, textarea:focus 
+{ 
+    background-color:rgb(255,255,204);
+}
+
+button {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: rgb(224,224,224);
+}
+button:active {
+    background-color: rgb(150,150,150);
+}
+
+/*Classes*/
+.header {
+    width:100%;
+    background: rgb(150, 0, 0);
+    padding:10px 30px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color:white;
+    background: rgba(150, 0, 0, 0.5);
+    /* RGBa with 0.6 opacity 
+    background: rgba(0, 0, 0, 0.6);*/
+}
+
+
+.main {
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    width: 90%;
+    background: rgb(0, 0, 0);
+
+    /* RGBa with 0.6 opacity */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 10px;  /*top and bottom 20px, left and right 10px*/
+    margin:10px;
+    overflow:auto;
+
+}
+
+.blogText {
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background-color: white;
+    color:black;
+    width:70%;
+    padding: 15px;
+    font-family: "Verdana";
+    font-size: 0.9em;
+    float:left;
+
+}
+
+.info {
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background-color: white;
+    padding: 15px;
+    font-family: "Verdana";
+    font-size: 0.9em;
+    margin: 0px 0px 0px 14px;
+    float:left;
+    width:28%;
+}
+
+
+
+
+
+.container {
+
+    padding:0px;
+    margin:0px;
+    width:100%;
+    overflow:auto;
+}
+.lbl {
+    dislay:block;
+    float:left;
+    width:15%;
+    vertical-align: top;
+    text-align:right;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.entry {
+    dislay:block;
+    float:left;
+    width:80%;
+    vertical-align: top;
+    float:left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 0px;
+}
+
+
+
+
+
+.previewButton {
+    float:left;
+    margin: 0px 10px;
+}
+
+.previewButton {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    background-color: rgb(255,153,153);
+    border-style: solid;
+    width:20%;
+    min-height: 50px;
+}
+.previewButton:active {
+    background-color: rgb(102,0,0);
+}
+
+.navigation {
+    font-size: 0.8em;
+}
+
+/*Individual items*/ 
+
+#editorWindow {
+    width:100%;
+    margin:0px;
+    min-height:300px;
+    max-height:300px;
+    border-style: solid;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    padding: 0px 5px;
+    font-size: 0.8em;
+    overflow-y: scroll;
+}
