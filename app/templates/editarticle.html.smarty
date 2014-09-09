@@ -1,0 +1,104 @@
+{assign var="path" value='../../../'}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="{$path}assets/css/admin.css">
+    <title>Enter Blog</title>
+</head>
+
+<body>
+<div class="header">The Old Dog Blog</div>
+<div class="main">
+
+    <div class="blogText">
+        <a href="{$path}admin"><-- Admin</a>
+
+        <div class="container">
+            <div class="lbl">Title</div>
+            <div class="entry"><input type="text" id="title" value="{$title}"></div>
+        </div>
+        <div class="container">
+            <div class="lbl">HTML</div>
+            <div class="entry">
+                <button id="heading">Heading<br>(ctrl+h)</button>
+                <button id="bold">Bold<br>(ctrl+b)</button>
+                <button id="italic">Italic<br>(ctrl+i)</button>
+                <button id="paragraph">Paragraph<br>(ctrl+p)</button>
+                <button id="pre">Code<br>(ctrl+d)</button>
+                <textarea id="htmlWindow" name="blogInfo">{$html}</textarea>
+                <p>
+                    <button id="preview" name="preview">Preview</button>
+                    <button id="save" name="save">Save <br>(ctrl+s)</button>
+                    <span id="lastSaved"></span>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="lbl">Preview</div>
+            <div class="entry"><div id="editorWindow">{$html}</div></div>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="lbl">tl;dr</div>
+            <div class="entry"><input type="text" id="tldr" value="{$tldr}"></div>
+        </div>
+
+        <div class="container">
+            <div class="lbl">Tags</div>
+            <div class="entry"><input type="text" id="tags" value="{$tagHtml}"></div>
+        </div>
+        <div id="references">
+            <div class="container">
+                <div class="lbl">References</div>
+                {*<div class="entry" id="refEntry">*}
+                    {*<?php*}
+                                {*if (count($refs) == 0)*}
+                                {*{*}
+                                    {*echo '<input type="text" name="refURL" id="url_0" value="url0"/>';*}
+                    {*echo '<input type="text" name="refDesc" id="desc_0" value="description0" >';*}
+                    {*}*}
+                    {*else*}
+                    {*{*}
+                    {*for ($x=0; $x<count($refs); $x++)*}
+                    {*{*}
+                    {*//echo "<h2>$refs[0]->url</h2>";*}
+                    {*echo '<input type="text" name="refURL" id="url_'.$x.'" value="'.$refs[$x]->url.'"/>';*}
+                    {*echo '<input type="text" name="refDesc" id="desc_'.$x.'" value="'.$refs[$x]->desc.'" >';*}
+                    {*}*}
+                    {*}*}
+                    {*?>*}
+
+
+                {*</div>*}
+            </div>
+        </div>
+        <button id="addRef">Add Reference</button>
+
+    </div>
+    <!--<div class="info">
+        Contact me at<br>
+        <a href="mailto:jonathan@able-futures.com">jonathan@able-futures.com</a>
+    </div>-->
+</div>
+
+<script src="{$path}assets/js/jquery-1.11.1.min.js"></script>
+<script src="{$path}assets/js/jquery.caret.js"></script>
+<script src="{$path}assets/js/shortcut.js"></script>
+<script src="{$path}assets/js/admin.js"></script>
+<script type="text/javascript">
+var articleId = {$articleId},
+    articlePK = {$articlePK};
+
+
+AbleFutures.Blog.Admin.initEvents(articlePK);
+</script>
+
+</body>
+</html>
+

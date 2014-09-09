@@ -12,7 +12,7 @@ $articleId = $_GET["a"];
 
 if ($articleId=='about') {
     //Build 'About' link
-    include 'assets/php/about.php';
+    include 'assets/php/about.html';
     $title='About Me';
     $about='About Me';
 
@@ -86,9 +86,9 @@ $stmt->close();
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="assets/js/jquery.caret.js"></script>
-        <script src="assets/js/shortcut.js"></script>
-        <link rel="stylesheet" type="text/css" href="assets/css/blog.css">
+        <script src="../assets/js/jquery.caret.js"></script>
+        <script src="../assets/js/shortcut.js"></script>
+        <link rel="stylesheet" type="text/css" href="../assets/css/blog.css">
             
   
         <title>The Old Dog Blog</title>
@@ -120,8 +120,8 @@ $stmt->close();
                 <h4>Previous posts</h4>
                 <p class="navigation">
                     <?=$menuHtml?>
-                    <a href="20130521.php">2013-05-21  - Capturing the HTML - The Editor</a><br>
-                    <a href="20130516.php">2013-05-16, 2013 - Creating the Blog - First Steps</a><br>
+                    <a href="../20130521.php">2013-05-21  - Capturing the HTML - The Editor</a><br>
+                    <a href="../20130516.php">2013-05-16, 2013 - Creating the Blog - First Steps</a><br>
                     
                 </p>
             </div>

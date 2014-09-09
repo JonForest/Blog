@@ -1,6 +1,6 @@
 <?php
 
-$html="<p>Hi.  I'm Jonathan Hollingsworth, a software developer turned project manager turning software developer.  After seven years running some pretty big
+$html = "<p>Hi.  I'm Jonathan Hollingsworth, a software developer turned project manager turning software developer.  After seven years running some pretty big
                 development projects for a wide variety of industries, I just can't shake the technical geek inside of me.  I'm currently living in Leeds, UK with my fiancee
             and as yet, no dog.  We will be locating to Queenstown in New Zealand from September, 2013, where we hope a dog will adopt us and take us for long, 
             mountainous walks.</p>

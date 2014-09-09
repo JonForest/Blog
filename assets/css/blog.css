@@ -60,16 +60,6 @@ input:focus, textarea:focus
     background-color:rgb(255,255,204);
 }
 
-button {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    background-color: rgb(224,224,224);
-}
-button:active {
-    background-color: rgb(150,150,150);
-}
-
 /*Classes*/
 .header {
     width:100%;

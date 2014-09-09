@@ -96,10 +96,10 @@ class Ref
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <link rel="stylesheet" type="text/css" href="assets/css/admin.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/admin.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="assets/js/jquery.caret.js"></script>
-        <script src="assets/js/shortcut.js"></script> 
+        <script src="../assets/js/jquery.caret.js"></script>
+        <script src="../assets/js/shortcut.js"></script>
         <script type="text/javascript">
             var ref;
             

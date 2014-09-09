@@ -1,2 +1,1 @@
-dataAccess.php
-assets/php/dbconnection.php
+app/common/dbconnection.php

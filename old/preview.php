@@ -25,7 +25,7 @@ require "assets/php/dbconnection.php";
     $stmt->bind_result($tagPK, $tag);
     while ($stmt->fetch()) 
     {
-        $tagHtml+='<a href="blog.php?tag=$tagPK">$tag</a>,';
+        $tagHtml+= '<a href="blog.php?tag=$tagPK">$tag</a>,';
     }
     //Remove the last comma as it isn't needed
     $tagHtml = substr($tagHtml, 0, strlen($tagHtml)-1); //TODO: Think this won't work.  See enterblog.php
@@ -48,9 +48,9 @@ require "assets/php/dbconnection.php";
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="assets/js/jquery.caret.js"></script>
-        <script src="assets/js/shortcut.js"></script>
-        <link rel="stylesheet" type="text/css" href="assets/css/blog.css">
+        <script src="../assets/js/jquery.caret.js"></script>
+        <script src="../assets/js/shortcut.js"></script>
+        <link rel="stylesheet" type="text/css" href="../assets/css/blog.css">
             
         <script type="text/javascript">
             

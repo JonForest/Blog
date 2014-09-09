@@ -1,0 +1,61 @@
+{assign var="preview" value=(isset($preview))?$preview:false}
+{assign var="path" value=($preview==true)?'../../../':''}
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="{$path}assets/bootstrap3.2.0/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="{$path}assets/css/blog.css"/>
+
+    <title>The Old Dog Blog</title>
+</head>
+<body>
+<div class="header">The Old Dog Blog</div>
+<div class="main">
+    <div class="blogText">
+        {if ($preview)}
+            <a class="btn btn-primary" href="../edit/{$articlePK}"><-- Edit</a>
+        {/if}
+        <h2>{$title}</h2>
+        <h3>{$date}</h3>
+        {$html}
+        {if ($title!='About Me')}
+        <span class="section"><h4>tl;dr</h4>
+        <p>{$tldr}</p></span>
+        <span>
+        <h4>References</h4>
+        {$refHtml}
+
+        </span>
+        {/if}
+    </div>
+    <div class="info">
+        {if $preview}
+            <a type="button" class="btn btn-success" href="../publish/{$articlePK}">Publish</a>
+        {/if}
+        <p><a href="about">About Me</a></p>
+        <p>Email: <br>
+            <a href="mailto:jonathan@able-futures.com">jonathan@able-futures.com</a></p>
+        <p>Twitter: <br>
+            <a href="https://twitter.com/jon_holl" class="twitter-follow-button" data-show-count="false" data-lang="en">@jon_holl</a>
+            {literal}
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+            {/literal}
+        <h4>Previous posts</h4>
+        <p class="navigation">
+            {$menuHtml}
+            <a href="20130521.php">2013-05-21  - Capturing the HTML - The Editor</a><br>
+            <a href="20130516.php">2013-05-16, 2013 - Creating the Blog - First Steps</a><br>
+
+        </p>
+    </div>
+</div>
+
+
+
+</body>
+<script src="{$path}assets/js/jquery-1.11.1.min.js"></script>
+<script src="{$path}assets/bootstrap3.2.0/js/bootstrap.min.js"></script>
+</html>
+

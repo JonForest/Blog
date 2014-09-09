@@ -1,0 +1,17 @@
+<?php
+/**
+ * @return mysqli
+ */
+function getConnection()
+{
+    $con=new mysqli("server","username", "password", "database");
+
+    /* check connection */
+    if (mysqli_connect_errno($con))
+    {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
+
+    return $con;
+}
+?>
