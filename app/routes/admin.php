@@ -2,6 +2,7 @@
 //require "assets/php/dbconnection.php";
 require_once "app/repositories/articleRepository.php";
 require_once "app/repositories/staticContentRepository.php";
+require_once "app/common/utils.php";
 
 $app->get(
     '/admin',
@@ -22,6 +23,7 @@ $app->get(
      * @returns {string}
      */
     function($id) use ($app) {
+        $id = (int)$id;
         $articleRepo = new ArticleRepository();
         $result =
             '{"result": ' .
@@ -56,10 +58,10 @@ $app->post(
         $article = new stdClass();
 
 
-        $article->html = $app->request->params("text");
-        $article->title = $app->request->params("title");
-        $article->tldr = $app->request->params("tldr");
-        $article->articleId = $app->request->params("articleId");
+        $article->html = Utils::getSafe($app->request->params("text"));
+        $article->title = Utils::getSafe($app->request->params("title"));
+        $article->tldr = Utils::getSafe($app->request->params("tldr"));
+        $article->articleId = Utils::getSafe($app->request->params("articleId"));
         $article->refs = json_decode($app->request->params("references"));
         $article->tags = json_decode($app->request->params("tags"));
 

@@ -50,7 +50,7 @@ class ArticleRepository
     public function getAllArticles()
     {
         $results = array();
-        $sql = "select articlePK, articleId, title, status, lastUpdate from Articles order by articleId desc";
+        $sql = "select articlePK, articleId, title, status, lastUpdate from Articles order by articleId desc, articlePK desc";
         $con = getConnection();
         $stmt = $con->query($sql);
         while($row = $stmt->fetch_array(MYSQLI_ASSOC)) {
@@ -81,12 +81,16 @@ class ArticleRepository
     }
 
 
-    public function deleteArticle($articePK)
+    /**
+     * @param $articlePK
+     * @return bool
+     */
+    public function deleteArticle($articlePK)
     {
         $sql = "delete from Articles where articlePK = ?";
         $con = getConnection();
         $stmt = $con->prepare($sql);
-        $stmt->bind_param("i", $articePK);
+        $stmt->bind_param("i", $articlePK);
         $stmt->execute();
         $stmt->store_result();
         return $stmt->affected_rows > 0;
